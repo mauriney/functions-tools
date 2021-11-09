@@ -125,9 +125,9 @@ function validaCPF(cpfX) {
 
   //Validar data de nascimento
   function validaDataNascimento(dtNascX){
-    var strData = dtNascX;
-    var partesData = strData.split("/");
-    var data = new Date(partesData[2], partesData[1] - 1, partesData[0]);
+    let strData = dtNascX;
+    let partesData = strData.split("/");
+    let data = new Date(partesData[2], partesData[1] - 1, partesData[0]);
     if(data > new Date()) {
      return false;
     }
