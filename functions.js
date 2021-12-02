@@ -133,3 +133,13 @@ function validaCPF(cpfX) {
     }
     return true;
   }
+
+//Função para evitar um delete acidental no formulario
+//OBS.: Sempre utilizar na tag form || Também deve adicionar no form do html o onsubmit="confirmDelete(event, this)"
+function confirmDelete(event, form){
+    event.preventDefault();
+    let decision = confirm("Você deseja deletar esta categoria?")
+    if(decision){
+        form.submit()
+    }
+}
